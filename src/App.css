@@ -22,3 +22,10 @@
   color: #09d3ac;
 }
 
+.App-search{
+  width: 300px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+}
+

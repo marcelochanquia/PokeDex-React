@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import logo from './pokemon_logo.jpg';
-
 import './App.css';
+import PokemonList from './componentes/PokemonsList'
 
 class App extends Component {
 
@@ -27,8 +27,6 @@ makeApiCall = searchInput => {
 
     var searchUrl = `https://pokeapi.co/api/v2/pokemon/?offset=0&limit=950`;
 
-
-    //var searchUrl = `https://pokeapi.co/api/v2/pokemon/${searchInput}`;
 
      fetch(searchUrl)
          
@@ -61,7 +59,9 @@ render(){
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h2 style={{ color: 'white' }}>Bienvenido al buscador de Pokémons</h2>
-                        <input name="text" 
+                        <input 
+                               className="App-search"
+                               name="text" 
                                type="text" 
                                placeholder="nombre pokémon" 
                                onChange={event => this.handleOnChange(event)} 
@@ -71,28 +71,11 @@ render(){
                         <button onClick={this.handleSearch}>Buscar</button>
       </header>
 
-
-
-      {this.state.pokemons ? (
-        <div>
-            {
-
-              this.state.pokemons.map((poke, index) => (
-            <div  key={index}>
-              <h2>Nombre: {poke.name}</h2>
-              <h2>
-                {<img src={'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+poke.url.split('/')[poke.url.split('/').length -2]+'.png?raw=true'} alt="team-thumbnail" height="200" width="200" />}
-              </h2>
-            </div>
-            ))
-             
-            }
-        </div>
-        ) : (
-        <p>Try searching for a pokémon</p>
-        )}
+      <div>
+        <PokemonList pokemons={this.state.pokemons}/> 
+      </div>
   
     </div>); 
-}
+  }
 }
 export default App;
