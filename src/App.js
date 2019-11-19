@@ -68,7 +68,7 @@ render(){
                                value={this.state.searchValue}
                         
                         />
-                        <button onClick={this.handleSearch}>Buscar</button>
+                        <button onClick={this.handleSearch} className="App-buscar">Buscar</button>
       </header>
 
       <div>
