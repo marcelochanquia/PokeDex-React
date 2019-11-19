@@ -71,10 +71,10 @@ render(){
                         <button onClick={this.handleSearch} className="App-buscar">Buscar</button>
       </header>
 
-      <div>
-        <PokemonList pokemons={this.state.pokemons}/> 
-      </div>
-  
+        <div >
+          <PokemonList pokemons={this.state.pokemons}/> 
+        </div>
+    
     </div>); 
   }
 }

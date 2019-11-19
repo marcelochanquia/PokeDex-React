@@ -20,7 +20,7 @@ export default withStyles({
         minWidth:"350px",
         margin: "2em", 
         textAlign:"center",
-        //boxSizing:"border-box"
+        boxSizing:"border-box",
         padding: "1em"
     },
     media:{
