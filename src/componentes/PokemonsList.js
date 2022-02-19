@@ -18,7 +18,7 @@ render(){
               <h2>
                 {<img src={'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+poke.url.split('/')[poke.url.split('/').length -2]+'.png?raw=true'} alt="team-thumbnail" height="200" width="200" />}
               </h2> */}
-              <PokeCard  name = {poke.name} image = {'https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/other-sprites/official-artwork/'+poke.url.split('/')[poke.url.split('/').length -2]+'.png?raw=true'}/>
+              <PokeCard  name = {poke.name} image = {'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/'+poke.url.split('/')[poke.url.split('/').length -2]+'.svg?raw=true'}/>
             </div>
             ))
              

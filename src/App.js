@@ -15,8 +15,8 @@ class App extends Component {
   }
 
   
-handleOnChange = event => {               //Metodo de la clasee con funcion flecha
-  this.setState({ searchValue: event.target.value }); //
+handleOnChange = event => {               
+  this.setState({ searchValue: event.target.value }); 
   };
 
 handleSearch = () => {
@@ -35,17 +35,17 @@ makeApiCall = searchInput => {
                 })
          .then(jsonData => {
 
-              let _pokemons = jsonData.results;
-              let search = this.state.searchValue.trim().toLowerCase();
+              let _pokemons = jsonData.results; //variable para la lista de pokemons devuelta por el api
+              let search = this.state.searchValue.trim().toLowerCase(); // el text a buiscar se convierte todo en minúscula
 
               //if (search.length > 0) {
-                _pokemons = _pokemons.filter(function(pokemon) {
+                _pokemons = _pokemons.filter(function(pokemon) { //recargo la variable _pokemons con la lista ya filtrada con los coincidentes
                   return pokemon.name.toLowerCase().match(search);
                 });
 
               //}*/
                 console.log(_pokemons);
-             this.setState({ pokemons: _pokemons })
+             this.setState({ pokemons: _pokemons }) //actualizo la variable de estado pokemons
          })
          .catch(function(error) {
           console.log('Hubo un problema con la petición Fetch:' + error.message)
