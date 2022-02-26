@@ -17,14 +17,14 @@ function PokeCard({name, classes,image}){
 
 export default withStyles({
     item:{
-        minWidth:"350px",
+        minWidth:"300px",
         margin: "2em", 
         textAlign:"center",
         boxSizing:"border-box",
         padding: "1em"
     },
     media:{
-        minHeight : "350px"
+        minHeight : "300px"
     }
 
 })(PokeCard);
